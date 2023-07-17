@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx knex migrate:latest; npx knex seed:run; nodemon server.js"
+    "start": "npx knex migrate:latest && npx knex seed:run && nodemon server.js",
+    "migrate:latest": "npx knex migrate:latest",
+    "knex": "npx knex",
+    "seed:run": "npx knex seed:run"
   },
   "author": "",
   "license": "ISC",

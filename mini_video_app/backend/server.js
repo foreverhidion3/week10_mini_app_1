@@ -9,15 +9,27 @@ app.use(cors());
 // app.use(express.json());
 
 
-// app.get('/', function(req, res) {
-//     res.send(`Welcome to mini_app server on port ${port}`);
-// })
-
 app.get('/', async function(request, response) {
     let data = await knex('movies').select('*')
     response.send((data))
-    // res.send('Welcome to Awesome Apps Home!!');
+    
 });
+
+//prepared for later
+// app.get('/', async function(request, response) {
+//     let data = await knex('movies').select('*')
+//     response.send(JSON.Strinify(data))
+    
+// });
+
+
+
+
+
+
+
+
+
 
 // app.get('/', (req, res) => {
 //     knex('/').select('*')

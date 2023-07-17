@@ -8,6 +8,6 @@ EXPOSE 8080
 
 RUN npm install
 
-RUN npm run migrate:latest && npm run knex seed:run
+# RUN npm run migrate:latest && npm run knex seed:run
 
 CMD ["npm", "start"]
