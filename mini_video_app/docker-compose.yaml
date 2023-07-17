@@ -21,10 +21,10 @@ services:
     networks: 
       - mini_video_app_network
     environment: 
-      DB_CONNECTION_STRING: postgres://postgres:docker@mini_video_app_db_container:5432/mini_video_app_db
+      DB_CONNECTION_STRING: postgres://postgres:docker@mini_video_app_db_container:5432/mini_video_app_db_image
       #use this DB_CONNECTION_STRING(set up in the knex file so that the server_image image and the server_db image can communicate?)
       
-  mini_video_app_db:
+  mini_video_app_db_image:
     image: postgres:latest
     container_name: mini_video_app_db_container
     ports:
@@ -34,7 +34,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: mini_video_app_db
+      POSTGRES_DB: mini_video_app_db_2
     networks: 
       - mini_video_app_network
 

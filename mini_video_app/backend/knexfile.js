@@ -5,7 +5,7 @@ require("dotenv").config()
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-const string = process.env.DB_CONNECTION_STRING
+// const string = process.env.DB_CONNECTION_STRING
 
   module.exports = {
 
